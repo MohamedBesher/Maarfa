@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saned.Maarfa.Data", "Maarfa.Data\Saned.Maarfa.Data.csproj", "{A8390FD6-D824-4F7F-999D-8EC96B29A360}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saned.Maarfa.Api", "Saned.Maarfa.Api\Saned.Maarfa.Api.csproj", "{03A615B5-6DCB-4110-B30E-F1C52074D391}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Saned.Asnane.ControlPanel", "Saned.Asnane.ControlPanel\Saned.Asnane.ControlPanel.csproj", "{255C46A7-839F-4797-BD55-A300B355E492}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8390FD6-D824-4F7F-999D-8EC96B29A360}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8390FD6-D824-4F7F-999D-8EC96B29A360}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8390FD6-D824-4F7F-999D-8EC96B29A360}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8390FD6-D824-4F7F-999D-8EC96B29A360}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03A615B5-6DCB-4110-B30E-F1C52074D391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03A615B5-6DCB-4110-B30E-F1C52074D391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03A615B5-6DCB-4110-B30E-F1C52074D391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03A615B5-6DCB-4110-B30E-F1C52074D391}.Release|Any CPU.Build.0 = Release|Any CPU
+		{255C46A7-839F-4797-BD55-A300B355E492}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{255C46A7-839F-4797-BD55-A300B355E492}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{255C46A7-839F-4797-BD55-A300B355E492}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{255C46A7-839F-4797-BD55-A300B355E492}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://saned.visualstudio.com/
+		SccProjectUniqueName0 = Saned.Maarfa.Api\\Saned.Maarfa.Api.csproj
+		SccProjectName0 = Saned.Maarfa.Api
+		SccAuxPath0 = https://saned.visualstudio.com
+		SccLocalPath0 = Saned.Maarfa.Api
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = Maarfa.Data\\Saned.Maarfa.Data.csproj
+		SccProjectName1 = Maarfa.Data
+		SccAuxPath1 = https://saned.visualstudio.com
+		SccLocalPath1 = Maarfa.Data
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = Saned.Asnane.ControlPanel\\Saned.Asnane.ControlPanel.csproj
+		SccProjectName2 = Saned.Asnane.ControlPanel
+		SccAuxPath2 = https://saned.visualstudio.com
+		SccLocalPath2 = Saned.Asnane.ControlPanel
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+EndGlobal

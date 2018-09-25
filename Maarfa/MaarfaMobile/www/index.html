@@ -1,0 +1,236 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline' ; script-src 'self' 'unsafe-inline' *; connect-src 'self' http://212.70.38.149 *; media-src *">-->
+
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+    <title>maarfa</title>
+    <link rel="stylesheet" href="css/framework7.material.min.css">
+    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
+    <link rel="stylesheet" href="css/framework7.material.rtl.min.css">
+    <!-- Path to your custom app styles-->
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="css/my-app.css">
+</head>
+<body>
+    <!-- Status bar overlay for fullscreen mode-->
+    <div class="statusbar-overlay"></div>
+    <!-- Panels overlay-->
+    <div class="panel-overlay"></div>
+    <!-- Right panel with cover effect-->
+    <div class="panel panel-right panel-cover">
+        <div class="content-block">
+            <div class="panel-prof">
+                <div class="img-container">
+                    <img src="img/profile.jpg" />
+                </div>
+
+            </div>
+            <a href="#index" class="close-panel"><i class="icon ion-ios-home-outline"></i>الصفحة الرئيسية</a>
+            <a id="exitLink" href="#" class="close-panel" onclick="ExitApplication()"><i class="icon ion-android-exit"></i>خروج</a>
+            <hr>
+            <div id="rightPanalDiv">
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Views-->
+    <div class="views">
+        <!-- Your main view, should have "view-main" class-->
+        <div class="view view-main">
+            <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
+            <div class="pages navbar-fixed">
+
+                <!-- Landing Page-->
+                <div data-page="landing" class="page landing">
+                    <div class="page-content no-bg-color" style="padding-bottom: 0 !important;">
+                        <!--<div class="overlay"></div>
+                        <div class="logo-cont"> <a href="#index"><img src="img/logo.png" /></a> </div>-->
+                        <div class="small_circle">
+                            <a href="#index">
+                                <img src="img/logo.png" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Index Page-->
+                <div id="indexPage" data-page="index" class="page cached home">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left sliding">
+
+                                <a href="#" class="link icon-only open-panel"><i class="ionicons ion-ios-book-outline"></i></a>
+                                الرئيسية
+                            </div>
+                            <div class="right sliding">
+                                <a href="#" class="link icon-only open-contact"><i class="ionicons ion-android-call"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content">
+                        <div id="divIndex" class="content-block">
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Category Page-->
+                <div id="categoryPage" data-page="category" class="page home cached toolbar-fixed navbar-fixed">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left sliding">
+
+                                <a id="linkBackCategories" href="#" class="link icon-only"><i class="ionicons ion-android-arrow-forward"></i></a>
+                                التصنيف
+                            </div>
+                            <div class="right sliding">
+                                <a href="#" class="link icon-only open-contact"><i class="ionicons ion-android-call"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Buttons row as tabs controller in Subnavbar-->
+                    <div class="toolbar tabbar">
+                        <div class="toolbar-inner">
+                            <!-- Link to 1st tab, active -->
+                            <a href="#tab1" class="button active tab-link">كتب</a>
+                            <!-- Link to 2nd tab -->
+                            <a href="#tab2" class="button tab-link ">فيديوهات</a>
+                            <!-- Link to 3rd tab -->
+                            <a href="#tab3" class="button tab-link">ملخصات</a>
+                        </div>
+                    </div>
+                        <div class="tabs-swipeable-wrap">
+                            <!-- Tabs, tabs wrapper -->
+                            <div class="tabs">
+                                <!-- Tab 1, active by default -->
+                                <div id="tab1" class="tab active  page-content infinite-scroll ">
+                                    <div class="content-block ">
+                                        <div id="divTab1" class="row">
+
+                                        </div>
+
+
+
+                                        <div id="divNotificationTab1" class="divAlert">
+                                            <p class="pNotification">لايوجد كتب   </p>
+                                        </div>
+                                        <div class="loading  infinite-scroll-preloader">
+
+                                            <img src="img/load.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Tab 2 -->
+                                <div id="tab2" class="tab page-content infinite-scroll">
+                                    <div class="content-block ">
+                                        <div id="divTab2" class="row">
+
+                                        </div>
+                                        <div id="divNotificationTab2" class="divAlert">
+                                            <p class="pNotification">لايوجد فيديوهات   </p>
+                                        </div>
+                                        <div class="loading  infinite-scroll-preloader">
+
+                                            <img src="img/load.svg" />
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <!-- Tab 3 -->
+                                <div id="tab3" class="tab page-content infinite-scroll ">
+                                    <div class="content-block ">
+                                        <div id="divTab3" class="row">
+
+                                        </div>
+
+                                        <div id="divNotificationTab3" class="divAlert">
+                                            <p class="pNotification">لايوجد ملخصات   </p>
+                                        </div>
+                                        <div class="loading  infinite-scroll-preloader">
+
+                                            <img src="img/load.svg" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                </div>
+                <!-- book details Page-->
+                <div id="bookPage" data-page="book" class="page home cached book">
+                    <div class="navbar">
+                        <div class="navbar-inner">
+                            <div class="left sliding">
+
+                                <a href="#" class="link icon-only back"><i class="ionicons ion-android-arrow-forward"></i></a>
+                                تفاصيل الكتاب
+                            </div>
+                            <div class="right sliding">
+                                <a href="#" class="link icon-only open-contact"><i class="ionicons ion-android-call"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-content">
+                        <img id="imgDetailBook" />
+                        <div class="content-block">
+                            <h3><i class="ionicons ion-ios-book-outline"></i> اسم الكتاب</h3>
+                            <div id="divBookName" class="card">
+
+                            </div>
+                            <h3><i class="ionicons ion-document"></i> تفاصيل الكتاب</h3>
+                            <div id="divBookDetails" class="card">
+
+
+                            </div>
+                            <h3><i class="ionicons ion-share"></i> مشاركة</h3>
+                            <div class="card share">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- video popover -->
+    <div class="popover popover-video">
+        <div id="videoFrame" class="popover-inner">
+            <iframe id="videoSrc" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <!-- summary popover -->
+    <div class="popover popover-summary">
+        <div class="popover-inner">
+            <img id="summaryImg" width="100%" />
+        </div>
+    </div>
+
+    <!-- contacts popover -->
+    <div class="popover popover-contact">
+        <div class="popover-inner">
+            <h3><i class="ionicons ion-android-mail"></i> <label id="labelMail"></label> </h3>
+            <h3><i class="ionicons ion-android-call"></i><label id="labelCall"></label> </h3>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+
+    <script type="text/javascript" src="js/framework7.min.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+    <script src="scripts/MainWork.js"></script>
+</body>
+</html>

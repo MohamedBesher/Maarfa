@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8390FD6-D824-4F7F-999D-8EC96B29A360}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Maarfa.Data</RootNamespace>
+    <AssemblyName>Maarfa.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.2.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.2.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Dtos\BookDto.cs" />
+    <Compile Include="Core\Dtos\CategoryDto.cs" />
+    <Compile Include="Core\Dtos\Overall.cs" />
+    <Compile Include="Core\Dtos\RegisterData.cs" />
+    <Compile Include="Core\Dtos\SummaryDto.cs" />
+    <Compile Include="Core\Dtos\VideoDto.cs" />
+    <Compile Include="Core\IUnitOfWork.cs" />
+    <Compile Include="Core\Models\ApplicationTypes.cs" />
+    <Compile Include="Core\Models\ApplicationUser.cs" />
+    <Compile Include="Core\Models\Book.cs" />
+    <Compile Include="Core\Models\Category.cs" />
+    <Compile Include="Core\Models\Client.cs" />
+    <Compile Include="Core\Models\ContactUs.cs" />
+    <Compile Include="Core\Models\MaterialType.cs" />
+    <Compile Include="Core\Models\RefreshToken.cs" />
+    <Compile Include="Core\Models\Summary.cs" />
+    <Compile Include="Core\Models\Video.cs" />
+    <Compile Include="Core\Repositories\IBookRepository.cs" />
+    <Compile Include="Core\Repositories\ICategoryRepository.cs" />
+    <Compile Include="Core\Repositories\IContactUsRepository.cs" />
+    <Compile Include="Core\Repositories\ISummaryRepository.cs" />
+    <Compile Include="Core\Repositories\IVideoRepository.cs" />
+    <Compile Include="Core\Tools\Helper.cs" />
+    <Compile Include="Core\UnitOfWork.cs" />
+    <Compile Include="ExtensionsMethods\ExtensionMethods.cs" />
+    <Compile Include="Persistence\EntityConfigurations\ApplicationUserConfigurations.cs" />
+    <Compile Include="Persistence\EntityConfigurations\ClientConfigurations.cs" />
+    <Compile Include="Persistence\EntityConfigurations\RefreshTokenConfigurations.cs" />
+    <Compile Include="Persistence\Infrastructure\ApplicationUser.cs" />
+    <Compile Include="Persistence\Infrastructure\ApplicationUserManager.cs" />
+    <Compile Include="Persistence\Infrastructure\ApplicationUserManagerImpl.cs" />
+    <Compile Include="Persistence\Infrastructure\ApplicationUserStore.cs" />
+    <Compile Include="Persistence\Infrastructure\ApplicationUserStoreImpl.cs" />
+    <Compile Include="Persistence\Infrastructure\IUserCustomStore.cs" />
+    <Compile Include="Persistence\Migrations\201701041208317_Create-Tables.cs" />
+    <Compile Include="Persistence\Migrations\201701041208317_Create-Tables.Designer.cs">
+      <DependentUpon>201701041208317_Create-Tables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\201701041451380_AddFields-createTable.cs" />
+    <Compile Include="Persistence\Migrations\201701041451380_AddFields-createTable.Designer.cs">
+      <DependentUpon>201701041451380_AddFields-createTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\201701051355160_Select_All_Tables.cs" />
+    <Compile Include="Persistence\Migrations\201701051355160_Select_All_Tables.Designer.cs">
+      <DependentUpon>201701051355160_Select_All_Tables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\201701080823091_EditModels.cs" />
+    <Compile Include="Persistence\Migrations\201701080823091_EditModels.Designer.cs">
+      <DependentUpon>201701080823091_EditModels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\201701080829583_EditSelectTables.cs" />
+    <Compile Include="Persistence\Migrations\201701080829583_EditSelectTables.Designer.cs">
+      <DependentUpon>201701080829583_EditSelectTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\201701101308278_delete-materialtypes.cs" />
+    <Compile Include="Persistence\Migrations\201701101308278_delete-materialtypes.Designer.cs">
+      <DependentUpon>201701101308278_delete-materialtypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\201701101314262_Edit-selectStored.cs" />
+    <Compile Include="Persistence\Migrations\201701101314262_Edit-selectStored.Designer.cs">
+      <DependentUpon>201701101314262_Edit-selectStored.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\201701150850150_insert-update-deleteTable.cs" />
+    <Compile Include="Persistence\Migrations\201701150850150_insert-update-deleteTable.Designer.cs">
+      <DependentUpon>201701150850150_insert-update-deleteTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\201701171150311_Edit-selectStored2.cs" />
+    <Compile Include="Persistence\Migrations\201701171150311_Edit-selectStored2.Designer.cs">
+      <DependentUpon>201701171150311_Edit-selectStored2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\201702011446050_Create-UserTables.cs" />
+    <Compile Include="Persistence\Migrations\201702011446050_Create-UserTables.Designer.cs">
+      <DependentUpon>201702011446050_Create-UserTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\201702121009535_create_client_Table.cs" />
+    <Compile Include="Persistence\Migrations\201702121009535_create_client_Table.Designer.cs">
+      <DependentUpon>201702121009535_create_client_Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\201702210907050_Add-Edit-delete-Category.cs" />
+    <Compile Include="Persistence\Migrations\201702210907050_Add-Edit-delete-Category.Designer.cs">
+      <DependentUpon>201702210907050_Add-Edit-delete-Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\201702210922450_Categories_selectList.cs" />
+    <Compile Include="Persistence\Migrations\201702210922450_Categories_selectList.Designer.cs">
+      <DependentUpon>201702210922450_Categories_selectList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\201703070815235_Edit_ContactUs_table.cs" />
+    <Compile Include="Persistence\Migrations\201703070815235_Edit_ContactUs_table.Designer.cs">
+      <DependentUpon>201703070815235_Edit_ContactUs_table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Persistence\Migrations\Configuration.cs" />
+    <Compile Include="Persistence\ApplicationDbContext.cs" />
+    <Compile Include="Persistence\EntityConfigurations\BookConfiguration.cs" />
+    <Compile Include="Persistence\EntityConfigurations\CategoryConfiguration.cs" />
+    <Compile Include="Persistence\EntityConfigurations\ContactUsConfiguration.cs" />
+    <Compile Include="Persistence\EntityConfigurations\SummaryConfiguration.cs" />
+    <Compile Include="Persistence\EntityConfigurations\VideoConfiguration.cs" />
+    <Compile Include="Persistence\IApplicationDbContext.cs" />
+    <Compile Include="Persistence\Providers\ApplicationTokenProvider.cs" />
+    <Compile Include="Persistence\Repositories\AuthRepository.cs" />
+    <Compile Include="Persistence\Repositories\BookRepository.cs" />
+    <Compile Include="Persistence\Repositories\CategoryRepository.cs" />
+    <Compile Include="Persistence\Repositories\ContactUsRepository.cs" />
+    <Compile Include="Persistence\Repositories\SummaryRepository.cs" />
+    <Compile Include="Persistence\Repositories\VideoRepository.cs" />
+    <Compile Include="Persistence\UnitOfWork.cs" />
+    <Compile Include="Persistence\Validators\ApplicationUserValidator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Persistence\Migrations\201701041208317_Create-Tables.resx">
+      <DependentUpon>201701041208317_Create-Tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\201701041451380_AddFields-createTable.resx">
+      <DependentUpon>201701041451380_AddFields-createTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\201701051355160_Select_All_Tables.resx">
+      <DependentUpon>201701051355160_Select_All_Tables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\201701080823091_EditModels.resx">
+      <DependentUpon>201701080823091_EditModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\201701080829583_EditSelectTables.resx">
+      <DependentUpon>201701080829583_EditSelectTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\201701101308278_delete-materialtypes.resx">
+      <DependentUpon>201701101308278_delete-materialtypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\201701101314262_Edit-selectStored.resx">
+      <DependentUpon>201701101314262_Edit-selectStored.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\201701150850150_insert-update-deleteTable.resx">
+      <DependentUpon>201701150850150_insert-update-deleteTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\201701171150311_Edit-selectStored2.resx">
+      <DependentUpon>201701171150311_Edit-selectStored2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\201702011446050_Create-UserTables.resx">
+      <DependentUpon>201702011446050_Create-UserTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\201702121009535_create_client_Table.resx">
+      <DependentUpon>201702121009535_create_client_Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\201702210907050_Add-Edit-delete-Category.resx">
+      <DependentUpon>201702210907050_Add-Edit-delete-Category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\201702210922450_Categories_selectList.resx">
+      <DependentUpon>201702210922450_Categories_selectList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Persistence\Migrations\201703070815235_Edit_ContactUs_table.resx">
+      <DependentUpon>201703070815235_Edit_ContactUs_table.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
